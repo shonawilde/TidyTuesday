@@ -24,7 +24,6 @@ st_aus <- ozmap_states %>%
 
 # find centroids
 st_centroids <- st_aus %>% 
-  mutate(area_m2 = st_area(geometry) %>% as.numeric()) %>% 
   cbind(st_centroid(st_aus$geometry) %>% st_coordinates())
 
 # create look-up table of states
@@ -70,6 +69,7 @@ st_aus_join <- st_centroids %>%
             by = "name") %>% 
   mutate(animals_per_m2 = total/area_m2) %>% 
   filter(!is.na(total))
+
 
 # PLOT ----
 
