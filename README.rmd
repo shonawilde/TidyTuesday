@@ -1,6 +1,13 @@
-\#TidyTuesday contributions
-================
-Shona Wilde
+---
+title: '#TidyTuesday contributions'
+author: "Shona Wilde"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
 
 ## July 2020 - Australian Animals and Pets
 
