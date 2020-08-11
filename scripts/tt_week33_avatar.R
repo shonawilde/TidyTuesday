@@ -29,7 +29,6 @@ top_20 %>%
 import_avatar()
 
 # build plot
-
 top_20 %>% 
   arrange(imdb_rating) %>% 
   mutate(chapter = factor(chapter, levels = chapter)) %>%
@@ -39,6 +38,7 @@ top_20 %>%
            size = 1) +
   theme_avatar(text.font = "Slayer") +
   scale_fill_avatar() +
+  scale_x_continuous(expand = c(0, 0.1)) +
   coord_cartesian(expand = F) +
   theme(plot.title = element_markdown(size = 15,
                                       hjust = 0),
